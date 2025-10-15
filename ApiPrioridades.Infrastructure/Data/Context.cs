@@ -6,14 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ApiPrioridades.Core.Entities;
 
-namespace ApiPrioridades.Infrastructure.Data
-{
-    internal class Context : DbContext
-    {
-        public Context(DbContextOptions options) : base(options)
-        {
-        }
+namespace ApiPrioridades.Infrastructure.Data;
 
-        public DbSet<Prioridades> Prioridades { get; set; }
-    }
+public class Context : DbContext
+{
+    public Context(DbContextOptions options) : base(options){}
+
+    public DbSet<Prioridades> Prioridades { get; set; }
 }
